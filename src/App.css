@@ -263,3 +263,97 @@ select:focus {
   align-items: center;
   margin: 0;
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                MOBILE PHONE                                */
+/* -------------------------------------------------------------------------- */
+/* Media Queries for Mobile Devices (Max Width 600px) */
+@media only screen and (max-width: 600px) {
+  /* Container Div */
+  .container {
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Button Styles */
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  /* Search Bar and Search Results */
+  .search-bar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search-results {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* Card Component */
+  .card {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  /* Text and Heading Adjustments */
+  h1,
+  h2,
+  h3 {
+    font-size: 18px;
+  }
+
+  /* Modal Content */
+  .modal-content {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  /* Company Card */
+  .company-card {
+    padding: 10px;
+  }
+
+  /* Company Logo */
+  .company-logo img {
+    width: 80px;
+  }
+
+  /* Small Cards */
+  .small-card .company-logo {
+    height: 80px;
+  }
+
+  /* Unavailable Section */
+  .unavailable {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  /* General adjustments to input fields */
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  select {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  /* Form elements spacing */
+  .checkbox-container {
+    margin: 8px 0;
+  }
+
+  /* Tag Section */
+  .tags {
+    font-size: 12px;
+  }
+
+  .tag {
+    padding: 2px;
+  }
+}
