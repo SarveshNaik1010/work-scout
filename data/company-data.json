@@ -1,0 +1,246 @@
+{
+  "companies": [
+    {
+      "name": "Google",
+      "description": "A global technology leader specializing in search engines, online advertising, and cloud computing.",
+      "techStack": ["Java", "Python", "Go", "Kubernetes", "TensorFlow"],
+      "headquarters": "Mountain View, CA, USA",
+      "companySize": "156,500 employees",
+      "averageSalary": 180000,
+      "currentJobOpenings": 1500,
+      "jobRolesAvailable": [
+        "Software Engineer",
+        "Data Scientist",
+        "Cloud Architect"
+      ],
+      "jobListingUrl": "https://careers.google.com/",
+      "logoUrl": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+    },
+    {
+      "name": "Microsoft",
+      "description": "A multinational technology company known for its software products, including Windows, Office, and Azure.",
+      "techStack": ["C#", "JavaScript", "Azure", ".NET", "SQL Server"],
+      "headquarters": "Redmond, WA, USA",
+      "companySize": "181,000 employees",
+      "averageSalary": 160000,
+      "currentJobOpenings": 1200,
+      "jobRolesAvailable": [
+        "Software Developer",
+        "DevOps Engineer",
+        "Cloud Engineer"
+      ],
+      "jobListingUrl": "https://careers.microsoft.com/",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg"
+    },
+    {
+      "name": "Facebook",
+      "description": "A social media giant that connects people globally through its platform and develops various social networking products.",
+      "techStack": ["React", "Hack", "PHP", "GraphQL", "Python"],
+      "headquarters": "Menlo Park, CA, USA",
+      "companySize": "86,500 employees",
+      "averageSalary": 175000,
+      "currentJobOpenings": 800,
+      "jobRolesAvailable": [
+        "Full-Stack Developer",
+        "Product Manager",
+        "Machine Learning Engineer"
+      ],
+      "jobListingUrl": "https://www.metacareers.com/",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+    },
+    {
+      "name": "Amazon",
+      "description": "An e-commerce leader and cloud services provider through AWS, offering a wide range of services and products globally.",
+      "techStack": ["Java", "Python", "AWS", "Lambda", "DynamoDB"],
+      "headquarters": "Seattle, WA, USA",
+      "companySize": "1,600,000 employees",
+      "averageSalary": 150000,
+      "currentJobOpenings": 2000,
+      "jobRolesAvailable": [
+        "Backend Engineer",
+        "Data Analyst",
+        "Cloud Solutions Architect"
+      ],
+      "jobListingUrl": "https://www.amazon.jobs/",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+    },
+    {
+      "name": "Apple",
+      "description": "A technology company that designs and manufactures consumer electronics, software, and online services.",
+      "techStack": ["Swift", "Objective-C", "Kotlin", "Java", "Python"],
+      "headquarters": "Cupertino, CA, USA",
+      "companySize": "164,000 employees",
+      "averageSalary": 170000,
+      "currentJobOpenings": 1000,
+      "jobRolesAvailable": [
+        "iOS Developer",
+        "Hardware Engineer",
+        "UX Designer"
+      ],
+      "jobListingUrl": "https://jobs.apple.com/",
+      "logoUrl": "https://purepng.com/public/uploads/large/purepng.com-apple-logologobrand-logoiconslogos-251519938788qhgdl.png"
+    },
+    {
+      "name": "Tesla",
+      "description": "An automotive and energy company that designs, manufactures, and sells electric vehicles and energy storage solutions.",
+      "techStack": ["Python", "Java", "C++", "MATLAB", "JavaScript"],
+      "headquarters": "Palo Alto, CA, USA",
+      "companySize": "99,290 employees",
+      "averageSalary": 140000,
+      "currentJobOpenings": 900,
+      "jobRolesAvailable": [
+        "Embedded Systems Engineer",
+        "Mechanical Engineer",
+        "Autopilot Software Engineer"
+      ],
+      "jobListingUrl": "https://www.tesla.com/careers",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png"
+    },
+    {
+      "name": "Netflix",
+      "description": "A streaming service that provides a wide variety of award-winning TV shows, movies, anime, and documentaries.",
+      "techStack": ["Node.js", "Java", "AWS", "Python", "React"],
+      "headquarters": "Los Gatos, CA, USA",
+      "companySize": "12,800 employees",
+      "averageSalary": 180000,
+      "currentJobOpenings": 300,
+      "jobRolesAvailable": [
+        "Frontend Engineer",
+        "DevOps Engineer",
+        "Content Strategist"
+      ],
+      "jobListingUrl": "https://jobs.netflix.com/",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+    },
+    {
+      "name": "Spotify",
+      "description": "A digital music service that gives users access to millions of songs, podcasts, and videos.",
+      "techStack": ["Python", "Java", "Kubernetes", "Scala", "React"],
+      "headquarters": "Stockholm, Sweden",
+      "companySize": "8,359 employees",
+      "averageSalary": 140000,
+      "currentJobOpenings": 500,
+      "jobRolesAvailable": [
+        "Backend Engineer",
+        "Data Scientist",
+        "Product Manager"
+      ],
+      "jobListingUrl": "https://www.spotifyjobs.com/",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
+    },
+    {
+      "name": "IBM",
+      "description": "A multinational technology company that provides hardware, software, and consulting services.",
+      "techStack": ["Java", "Python", "C++", "Docker", "Kubernetes"],
+      "headquarters": "Armonk, NY, USA",
+      "companySize": "345,000 employees",
+      "averageSalary": 130000,
+      "currentJobOpenings": 1100,
+      "jobRolesAvailable": [],
+      "jobListingUrl": "https://www.ibm.com/employment/",
+      "logoUrl": "https://zeevector.com/wp-content/uploads/IBM-Logo-PNG-Transparent.png"
+    },
+    {
+      "name": "Salesforce",
+      "description": "A cloud-based software company providing customer relationship management (CRM) services.",
+      "techStack": [
+        "Java",
+        "Apex",
+        "JavaScript",
+        "Salesforce Lightning",
+        "SQL"
+      ],
+      "headquarters": "San Francisco, CA, USA",
+      "companySize": "77,000 employees",
+      "averageSalary": 150000,
+      "currentJobOpenings": 600,
+      "jobRolesAvailable": [
+        "Salesforce Developer",
+        "Solution Architect",
+        "Marketing Cloud Specialist"
+      ],
+      "jobListingUrl": "https://www.salesforce.com/company/careers/",
+      "logoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOe5DUu0YtRtsThooyBpKFFlSyUk_k6Mbpe9oWHwjy81V9T39qnWRU1atPpiH6Lvh6Exo&usqp=CAU"
+    },
+    {
+      "name": "Adobe",
+      "description": "A software company specializing in multimedia and creativity software products, with its flagship being Photoshop.",
+      "techStack": ["JavaScript", "TypeScript", "Java", "React", "Node.js"],
+      "headquarters": "San Jose, CA, USA",
+      "companySize": "29,000 employees",
+      "averageSalary": 145000,
+      "currentJobOpenings": 400,
+      "jobRolesAvailable": [
+        "Software Engineer",
+        "UI/UX Designer",
+        "Cloud Architect"
+      ],
+      "jobListingUrl": "https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced",
+      "logoUrl": "https://s23.q4cdn.com/979560357/files/doc_multimedia/2024/6/27/Adobe-Logo@lowres.png"
+    },
+    {
+      "name": "Oracle",
+      "description": "A leading cloud technology company that provides computing infrastructure and software to help businesses.",
+      "techStack": ["Java", "SQL", "Kubernetes", "Docker", "Oracle Cloud"],
+      "headquarters": "Austin, TX, USA",
+      "companySize": "132,000 employees",
+      "averageSalary": 140000,
+      "currentJobOpenings": 1200,
+      "jobRolesAvailable": [
+        "Cloud Engineer",
+        " Database Administrator",
+        "DevOps Engineer"
+      ],
+      "jobListingUrl": "https://www.oracle.com/corporate/careers/",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Oracle_logo.svg/1024px-Oracle_logo.svg.png"
+    },
+    {
+      "name": "Intel",
+      "description": "A semiconductor chip manufacturer that supplies processors for computer system manufacturers such as Apple, Lenovo, HP, and Dell.",
+      "techStack": ["C++", "Python", "Verilog", "VHDL", "TensorFlow"],
+      "headquarters": "Santa Clara, CA, USA",
+      "companySize": "110,000 employees",
+      "averageSalary": 135000,
+      "currentJobOpenings": 800,
+      "jobRolesAvailable": [
+        "Hardware Engineer",
+        "AI Research Scientist",
+        "Embedded Systems Engineer"
+      ],
+      "jobListingUrl": "https://jobs.intel.com/",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Intel-logo-2022.png"
+    },
+    {
+      "name": "LinkedIn",
+      "description": "A social networking service that focuses on professional networking and career development.",
+      "techStack": ["Java", "Scala", "Kafka", "React", "Hadoop"],
+      "headquarters": "Sunnyvale, CA, USA",
+      "companySize": "18,000 employees",
+      "averageSalary": 160000,
+      "currentJobOpenings": 500,
+      "jobRolesAvailable": [
+        "Data Engineer",
+        "Full-Stack Engineer",
+        "Machine Learning Engineer"
+      ],
+      "jobListingUrl": "https://careers.linkedin.com/",
+      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+    },
+    {
+      "name": "Stripe",
+      "description": "A technology company that builds economic infrastructure for the internet, specializing in online payment processing for businesses.",
+      "techStack": ["Ruby", "JavaScript", "React", "Go", "PostgreSQL"],
+      "headquarters": "San Francisco, CA, USA",
+      "companySize": "7,000 employees",
+      "averageSalary": 170000,
+      "currentJobOpenings": 600,
+      "jobRolesAvailable": [
+        "Backend Engineer",
+        "Security Engineer",
+        "Product Manager"
+      ],
+      "jobListingUrl": "https://stripe.com/jobs",
+      "logoUrl": "https://www.edigitalagency.com.au/wp-content/uploads/new-stripe-logo-png.png"
+    }
+  ]
+}
