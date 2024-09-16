@@ -75,7 +75,7 @@ function App() {
       if (!isSearchBtnClicked) return;
       async function getCompanies() {
         dispatch({ type: "changeStatus", payload: "loading" });
-        const res = await fetch(`http://localhost:7000/companies`);
+        const res = await fetch(`https://res.cloudinary.com/dvq2kdv1z/raw/upload/v1726454591/company-data_woivba.json`);
         const data = await res.json();
         const filteredData =
           searchQuery === ""
@@ -98,7 +98,7 @@ function App() {
       <div className="contanier header">
         <SearchBox dispatch={dispatch} searchQuery={searchQuery} />
         <button onClick={(e) => dispatch({ type: "toggleModal" })}>
-          View Intrested
+          {intrestedCompanies.length} Intrested Companies
         </button>
       </div>
       {status === "ready" && <StartScreen />}
@@ -106,7 +106,7 @@ function App() {
       {status === "active" &&
         (searchResults.length === 0 ? (
           <div className="contanier">
-            <h3>No company with the name {searchQuery}</h3>
+            <h3>No company with the {selectCriteria} {searchQuery}</h3>
           </div>
         ) : (
           <SearchResults
