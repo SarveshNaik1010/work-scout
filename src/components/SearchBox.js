@@ -24,10 +24,10 @@ function SearchBox({ searchQuery, dispatch }) {
         className="btn-search"
         onClick={(e) => {
           e.preventDefault();
-          dispatch({type: "startSearching"})
+          dispatch({ type: "startSearching" });
         }}
       >
-        Search
+        {searchQuery.length === 0 ? "Get All Companies" : "Search"}
       </button>
       {/* <div className="tags">
         <span className="tag">HTML</span>
