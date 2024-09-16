@@ -75,8 +75,11 @@ function App() {
       if (!isSearchBtnClicked) return;
       async function getCompanies() {
         dispatch({ type: "changeStatus", payload: "loading" });
-        const res = await fetch(`https://res.cloudinary.com/dvq2kdv1z/raw/upload/v1726454591/company-data_woivba.json`);
-        const data = await res.json();
+        const res = await fetch(
+          `https://res.cloudinary.com/dvq2kdv1z/raw/upload/v1726454591/company-data_woivba.json`
+        );
+        const { companies: data } = await res.json();
+        console.log(data);
         const filteredData =
           searchQuery === ""
             ? data
@@ -106,7 +109,9 @@ function App() {
       {status === "active" &&
         (searchResults.length === 0 ? (
           <div className="contanier">
-            <h3>No company with the {selectCriteria} {searchQuery}</h3>
+            <h3>
+              No company with the {selectCriteria} {searchQuery}
+            </h3>
           </div>
         ) : (
           <SearchResults
