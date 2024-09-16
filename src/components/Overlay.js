@@ -18,9 +18,15 @@ function Overlay({ intrestedCompanies, dispatch }) {
   return (
     <div className="modal" onClick={() => dispatch({ type: "toggleModal" })}>
       <div className="modal-content">
-        {intrestedCompanies.map((res, i) => {
-          return <CompanySmallCard company={res} dispatch={dispatch} key={i} />;
-        })}
+        {intrestedCompanies.length === 0 ? (
+          <p>No Intresed Companies</p>
+        ) : (
+          intrestedCompanies.map((res, i) => {
+            return (
+              <CompanySmallCard company={res} dispatch={dispatch} key={i} />
+            );
+          })
+        )}
       </div>
     </div>
   );

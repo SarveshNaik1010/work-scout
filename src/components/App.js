@@ -6,6 +6,8 @@ import StartScreen from "./StartScreen";
 import Loading from "./Loading";
 import filterSearchResult from "../utils/filterSearchResult";
 import Overlay from "./Overlay";
+import Info from "./Info";
+import Error from "./Error";
 
 const initialState = {
   status: "ready",
@@ -15,6 +17,8 @@ const initialState = {
   searchResults: [],
   intrestedCompanies: [],
   showModel: false,
+  showInfo: true,
+  errorMessage: "",
 };
 
 function reducer(state, action) {
@@ -43,13 +47,18 @@ function reducer(state, action) {
     case "toggleModal":
       return { ...state, showModel: !state.showModel };
 
-    case "fetchCompany": {
+    case "toggleInfo":
+      return { ...state, showInfo: !state.showInfo };
+
+    case "fetchCompany":
       return {
         ...state,
         showModel: false,
         searchResults: [action.payload],
       };
-    }
+
+    case "error":
+      return { ...state, errorMessage: action.payload, status: "error" };
 
     default:
       return new Error("Something went wrong");
@@ -66,6 +75,8 @@ function App() {
       searchResults,
       intrestedCompanies,
       showModel,
+      showInfo,
+      errorMessage,
     },
     dispatch,
   ] = useReducer(reducer, initialState);
@@ -74,19 +85,23 @@ function App() {
     function () {
       if (!isSearchBtnClicked) return;
       async function getCompanies() {
-        dispatch({ type: "changeStatus", payload: "loading" });
-        const res = await fetch(
-          `https://res.cloudinary.com/dvq2kdv1z/raw/upload/v1726454591/company-data_woivba.json`
-        );
-        const { companies: data } = await res.json();
-        console.log(data);
-        const filteredData =
-          searchQuery === ""
-            ? data
-            : filterSearchResult(data, selectCriteria, searchQuery);
-        dispatch({ type: "addSearchResults", payload: filteredData });
-        dispatch({ type: "stopSearching" });
-        dispatch({ type: "changeStatus", payload: "active" });
+        try {
+          dispatch({ type: "changeStatus", payload: "loading" });
+          const res = await fetch(
+            `https://res.cloudinary.com/dvq2kdv1z/raw/upload/v1726454591/company-data_woivba.json`
+          );
+          const { companies: data } = await res.json();
+          console.log(data);
+          const filteredData =
+            searchQuery === ""
+              ? data
+              : filterSearchResult(data, selectCriteria, searchQuery);
+          dispatch({ type: "addSearchResults", payload: filteredData });
+          dispatch({ type: "stopSearching" });
+          dispatch({ type: "changeStatus", payload: "active" });
+        } catch (error) {
+          dispatch({ type: "error", payload: "Something went wrong!" });
+        }
       }
       getCompanies();
     },
@@ -95,6 +110,7 @@ function App() {
 
   return (
     <>
+      {showInfo && <Info dispatch={dispatch} />}
       {showModel && (
         <Overlay dispatch={dispatch} intrestedCompanies={intrestedCompanies} />
       )}
@@ -103,10 +119,13 @@ function App() {
         <button onClick={(e) => dispatch({ type: "toggleModal" })}>
           {intrestedCompanies.length} Intrested Companies
         </button>
+        <button onClick={(e) => dispatch({ type: "toggleInfo" })}>Info</button>
       </div>
       {status === "ready" && <StartScreen />}
       {status === "loading" && <Loading />}
+      {status === "error" && <Error errorMessage={errorMessage} />}
       {status === "active" &&
+        errorMessage === "" &&
         (searchResults.length === 0 ? (
           <div className="contanier">
             <h3>

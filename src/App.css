@@ -162,9 +162,30 @@ select:focus {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
+.infoModal .modal-content {
+  position: relative;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  padding-bottom: 72px;
+  font-size: 16px;
+}
+
+.message {
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                               ACTUAL CONTENT                               */
 /* -------------------------------------------------------------------------- */
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+}
 
 .start-text {
   text-align: center;
