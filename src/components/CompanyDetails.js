@@ -45,7 +45,7 @@ function CompanyDetails({ companyData, intrestedCompanies, dispatch }) {
         <img src={companyData.logoUrl} alt="Google Logo" />
       </div>
       <div className="company-details space-y-4">
-        <h1>{companyData.name}</h1>
+        <h1 className="text-[24px] mt-4 ph:text-[18px]">{companyData.name}</h1>
         <p>{companyData.description}</p>
         <p>
           <strong>Headquarters:</strong> {companyData.headquarters}
