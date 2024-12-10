@@ -4,7 +4,7 @@ function Info({ dispatch }) {
       className="modal infoModal"
       onClick={() => dispatch({ type: "toggleInfo" })}
     >
-      <ul className="modal-content">
+      <ul className="modal-content ph:m-4">
         <h2>Guideline to use the app</h2>
         <li>1. Keep the input field empty for getting all companies</li>
         <li>

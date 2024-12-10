@@ -1,7 +1,7 @@
 function Error({ errorMessage }) {
   return (
     <div className="contanier">
-      <h3>{errorMessage}</h3>
+      <h3 className="">{errorMessage}</h3>
     </div>
   );
 }

@@ -22,8 +22,8 @@ function CompanyDetails({ companyData, intrestedCompanies, dispatch }) {
   return (
     <div className="company-card">
       {companyData.jobRolesAvailable.length === 0 && (
-        <div className="unavailable">
-          <p>
+        <div className="unavailable ph:p-0 backdrop-blur-[2px]">
+          <p className="unavailable-p ph:w-full">
             Job openings are currently unavailable
             <div class="checkbox-container" onClick={manageList}>
               <input
@@ -44,7 +44,7 @@ function CompanyDetails({ companyData, intrestedCompanies, dispatch }) {
       <div className="company-logo">
         <img src={companyData.logoUrl} alt="Google Logo" />
       </div>
-      <div className="company-details">
+      <div className="company-details space-y-4">
         <h1>{companyData.name}</h1>
         <p>{companyData.description}</p>
         <p>

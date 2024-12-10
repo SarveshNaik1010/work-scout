@@ -114,12 +114,12 @@ function App() {
       {showModel && (
         <Overlay dispatch={dispatch} intrestedCompanies={intrestedCompanies} />
       )}
-      <div className="contanier header">
+      <div className="contanier header ph:flex ph:flex-col ph:items-start ph:justify-between ph:gap-3 ph:text-sm ">
         <SearchBox dispatch={dispatch} searchQuery={searchQuery} />
-        <button onClick={(e) => dispatch({ type: "toggleModal" })}>
+        <button className="ph:w-full" onClick={(e) => dispatch({ type: "toggleModal" })}>
           {intrestedCompanies.length} Intrested Companies
         </button>
-        <button onClick={(e) => dispatch({ type: "toggleInfo" })}>Info</button>
+        <button className="ph:w-full" onClick={(e) => dispatch({ type: "toggleInfo" })}>Info</button>
       </div>
       {status === "ready" && <StartScreen />}
       {status === "loading" && <Loading />}
@@ -128,7 +128,7 @@ function App() {
         errorMessage === "" &&
         (searchResults.length === 0 ? (
           <div className="contanier">
-            <h3>
+            <h3 className="ph:text-sm">
               No company with the {selectCriteria} {searchQuery}
             </h3>
           </div>

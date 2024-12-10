@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Global Styles */
 body {
   font-family: "Poppins", Helvetica, Arial, sans-serif;
@@ -268,7 +272,7 @@ select:focus {
   text-align: center;
 }
 
-.unavailable p {
+.unavailable-p {
   background-color: #fff;
 }
 

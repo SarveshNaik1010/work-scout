@@ -1,8 +1,8 @@
 function SearchBox({ searchQuery, dispatch }) {
   return (
-    <form className="search-bar">
+    <form className="search-bar ph:flex ph:flex-col ph:w-full ph:items-stretch ph:m-0">
       <select
-        className="select-creteria"
+        className="select-creteria ph:flex-1 ph:w-full"
         onChange={(e) =>
           dispatch({ type: "selectCriteria", payload: e.target.value })
         }
@@ -16,12 +16,14 @@ function SearchBox({ searchQuery, dispatch }) {
       <input
         type="text"
         value={searchQuery}
+        className="ph:flex-1"
+        placeholder="Enter Query"
         onChange={(e) =>
           dispatch({ type: "changeQuery", payload: e.target.value })
         }
       />
       <button
-        className="btn-search"
+        className="btn-search ph:flex-1"
         onClick={(e) => {
           e.preventDefault();
           dispatch({ type: "startSearching" });
