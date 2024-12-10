@@ -10,7 +10,7 @@ function Info({ dispatch }) {
         <li>
           2. Companies: Google, Microsoft, Apple, IBM, Spotify, Netlifx etc.
         </li>
-        <p className="message">Click anywhere to close this window</p>
+        <p className="message mb-4">Click anywhere to close this window</p>
       </ul>
     </div>
   );

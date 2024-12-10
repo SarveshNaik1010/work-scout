@@ -110,6 +110,7 @@ function App() {
 
   return (
     <>
+      <h1 className="m-3 text-4xl text-center uppercase font-bold ph:text-2xl"> <span className="text-[#007bff]">Work</span> <span className="text-stone-800">Scout</span></h1>
       {showInfo && <Info dispatch={dispatch} />}
       {showModel && (
         <Overlay dispatch={dispatch} intrestedCompanies={intrestedCompanies} />
